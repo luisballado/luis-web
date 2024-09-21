@@ -1,0 +1,33 @@
+.bfs-dfs-container {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+  width: 100%;
+  max-width: 950px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.button-container i {
+  font-size: 15px;
+}
+
+.button-container button:hover {
+  cursor: pointer;
+}
+
+.maze-container span:hover {
+  cursor: pointer;
+  color: #737373;
+}

@@ -10,16 +10,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .caja {
+	  display: flex;
+	  flex-direction: row-reverse;
+	  gap: 0px;
+      }
+      
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
   </head>
   <body class="is-preload">
-    <div id="myDiv"></div>
-    <script>
-      new Vivus('my-div', { duration: 200, file: 'cloud-rain-alt_animated.svg' }, myCallback);
-    </script>
     <marquee>
-        "Las máquinas pueden hacernos preguntas a las que aún no sabemos responder. - Turing"
+      "Las máquinas pueden hacernos preguntas a las que aún no sabemos responder. - Turing"
     </marquee> 
     <!-- Header -->
     <header id="header">
@@ -28,8 +31,22 @@
 	<h1><strong>I am Luis</strong>, a programmer and maker <br />
 	  passionate about developing innovative solutions. <br /><br />
       </div>
+      <div id="remove" class='bfs-dfs-container'>
+	<div class='bfs'>
+          <canvas id='bfs-graph'></canvas>
+	</div>
+	<div class='dfs'>
+          <canvas id='dfs-graph'></canvas>
+	</div>
+      </div>
+      <div id="remove2" class='button-container'>
+	<button type="button" id="reset" name="reset">
+          <i class="fa fa-repeat" aria-hidden="true"></i>
+	</button>
+      </div>
+      
     </header>
-    
+
     <!-- Main -->
     <div id="main">
       
@@ -448,12 +465,13 @@
 	  <li><a href="mailto:luis@madlab.mx" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 	</ul>
 	<ul class="copyright">
-	  <li>&copy; madlabmx</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+	  <li>&copy; <a href="https://madlab.mx">madlabmx</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 	</ul>
       </div>
     </footer>
     
     <!-- Scripts -->
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
@@ -461,10 +479,27 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script >
+    <script type="text/javascript" src="bundle.js"></script>
+    
+    <link rel="stylesheet" href="maze.css">
+    <script src="https://use.fontawesome.com/2d03c56782.js"></script>
+    
+    <script type="text/javascript">
 
+      var width = screen.width,
+          height = screen.height;
+      
+      if (screen.width <= 600 || screen.height <= 176) {
+	  console.log("mobile");
+	  $('#remove').remove();
+	  $('#remove2').remove();
+	  
+      }else{
+	  console.log("other");
+      }
+      
       var random_boolean = Math.random() < 0.5;
-
+      
       if(random_boolean){
 	  
 	  const defaults = {
@@ -501,7 +536,7 @@
 	  setTimeout(shoot, 100);
 	  setTimeout(shoot, 200);
       }else{
-
+	  
 	  const duration = 15 * 1000,
 		animationEnd = Date.now() + duration,
 		defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -535,6 +570,8 @@
 	  }, 250);
 	  
       }
+      
+            
     </script>
     
   </body>
