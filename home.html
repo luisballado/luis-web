@@ -30,6 +30,10 @@
 	<a class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 	<h1><strong>I am Luis</strong>, a programmer and maker <br />
 	  passionate about developing innovative solutions. <br /><br />
+	  <canvas id="mycanvas" width="400" height="100"></canvas>
+      </div>
+      <div id="rem">
+	
       </div>
       <div id="remove" class='bfs-dfs-container'>
 	<div class='bfs'>
@@ -44,7 +48,6 @@
           <i class="fa fa-repeat" aria-hidden="true"></i>
 	</button>
       </div>
-      
     </header>
 
     <!-- Main -->
@@ -138,7 +141,7 @@
       </section>
       
       <!-- Four -->
-      <!--
+      
 	  <section id="four">
 	    <h2>Elements</h2>
 	    
@@ -453,7 +456,7 @@
 	    </section>
 	    
 	  </section>
-	  -->
+	  
 	  
     </div>
     
@@ -483,6 +486,43 @@
     
     <link rel="stylesheet" href="maze.css">
     <script src="https://use.fontawesome.com/2d03c56782.js"></script>
+    <script type="text/javascript" src="smoothie.js"></script>
+    <script>
+      var smoothie = new SmoothieChart();
+      smoothie.streamTo(document.getElementById("mycanvas"));
+      // Data
+      var line1 = new TimeSeries();
+      var line2 = new TimeSeries();
+      
+      // Add a random value to each line every second
+      setInterval(function() {
+	  line1.append(Date.now(), Math.random());
+	  line2.append(Date.now(), Math.random());
+      }, 1000);
+      
+      // Add to SmoothieChart
+      smoothie.addTimeSeries(line1);
+      smoothie.addTimeSeries(line2);
+
+      smoothie.streamTo(document.getElementById("mycanvas"), 1000 /*delay*/);
+      
+      var smoothie = new SmoothieChart({
+	  grid: { strokeStyle:'rgb(125, 0, 0)', fillStyle:'rgb(60, 0, 0)',
+		  lineWidth: 1, millisPerLine: 250, verticalSections: 6, },
+	  labels: { fillStyle:'rgb(60, 0, 0)' }
+      });
+      smoothie.addTimeSeries(line1,
+			     { strokeStyle:'rgb(0, 255, 0)', fillStyle:'rgba(0, 255, 0, 0.4)', lineWidth:3 });
+      smoothie.addTimeSeries(line2,
+			     { strokeStyle:'rgb(255, 0, 255)', fillStyle:'rgba(255, 0, 255, 0.3)', lineWidth:3 });
+      
+    </script>
+    <script src="tiny-toast.js"></script>
+    <script>
+      tinyToast.show('Hola!')
+      // timeout (ms) is optional
+      tinyToast.hide(2000)
+    </script>
     
     <script type="text/javascript">
 
