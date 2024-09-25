@@ -32,22 +32,10 @@
 	<a class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 	<h1><strong>I am Luis</strong>, <span id="element"></span> <br />
 	  passionate about developing innovative solutions. <br /><br />
-	  <canvas id="mycanvas" width="400" height="100"></canvas>
+	  
       </div>
       
-      <div id="remove" class='bfs-dfs-container'>
-	<div class='bfs'>
-          <canvas id='bfs-graph'></canvas>
-	</div>
-	<div class='dfs'>
-          <canvas id='dfs-graph'></canvas>
-	</div>
-      </div>
-      <div id="remove2" class='button-container'>
-	<button type="button" id="reset" name="reset">
-          <i class="fa fa-repeat" aria-hidden="true"></i>
-	</button>
-      </div>
+      
     </header>
 
     <!-- Main -->
@@ -59,59 +47,84 @@
 	  <h2>Crafting Innovative Software Solutions</h2>
 	</header>
 	<p>As a software developer and maker passionate about drone autonomy, I specialize in creating advanced UAV systems that integrate cutting-edge software and hardware solutions. With expertise in autonomous navigation, control algorithms, and aerial robotics, I am dedicated to driving innovation in unmanned systems. My goal is to develop efficient, intelligent technologies that push the boundaries of aerial automation.</p>
+      </section>
+
+      <!-- Two -->
+      <section id="two">
 	<!--
-	    <ul class="actions">
-	  <li><a href="#" class="button">Learn More</a></li>
-	</ul>
-	    -->
-	    <h2>Rueda de la fortuna</h2>
-	    <div id="wheelOfFortune">
+	<h2>Rueda de la fortuna</h2>
+	
+	
+	<h2>BFS/DFS</h2>
+	<div class='bfs-dfs-container'>
+	  <div class='bfs'>
+	    <canvas id='bfs-graph'></canvas>
+	  </div>
+	  <div class='dfs'>
+	    <canvas id='dfs-graph'></canvas>
+	  </div>
+	</div>
+	<div class='button-container'>
+	  <button type="button" id="reset" name="reset">
+	    <i class="fa fa-repeat" aria-hidden="true"></i>
+	  </button>
+	</div>
+	
+	<h2>Gráficas</h2>
+	
+	-->
+	<h2>Recent Work</h2>
+	<div class="row">
+	  <article class="col-6 col-12-xsmall work-item">
+	   
+	    <div id="wheelOfFortune" class="fit">
 	      <canvas id="wheel" width="300" height="300"></canvas>
 	      <div id="spin">GIRAR</div>
 	    </div>
-      </section>
-      
-      <!-- Two -->
-      <!--
-          <section id="two">
-	    <h2>Recent Work</h2>
-	<div class="row">
-	  <article class="col-6 col-12-xsmall work-item">
-	    <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-	    <h3>Magna sed consequat tempus</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <h3>Rueda</h3>
+	    <p>Rueda de la fortuna con todos los eventos</p>
 	  </article>
 	  <article class="col-6 col-12-xsmall work-item">
-	    <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-	    <h3>Ultricies lacinia interdum</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <div class='bfs-dfs-container fit'>
+	      <div class='bfs'>
+		<canvas id='bfs-graph'></canvas>
+	      </div>
+	    </div>
+	    <h3>Búsqueda BFS</h3>
+	    <p>Una busqueda BFS tiene complejidad O(V+E).</p>
 	  </article>
 	  <article class="col-6 col-12-xsmall work-item">
-	    <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-	    <h3>Tortor metus commodo</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <div class='bfs-dfs-container'>
+	      <div class='dfs'>
+		<canvas id='dfs-graph'></canvas>
+	      </div>
+	    </div>
+	    <h3>Búsqueda DFS</h3>
+	    <p>Una búsqueda a profundidad tiene complejidad O(V+E).</p>
 	  </article>
 	  <article class="col-6 col-12-xsmall work-item">
-	    <a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-	    <h3>Quam neque phasellus</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <canvas id="mycanvas" width="300" height="100"></canvas>
+	    <h3>Gráficas</h3>
+	    <p>Gráficas con funciones en el tiempo.</p>
 	  </article>
 	  <article class="col-6 col-12-xsmall work-item">
 	    <a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-	    <h3>Nunc enim commodo aliquet</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <h3>Portal de Administración</h3>
+	    <p>Administración de cualquier sistema.</p>
 	  </article>
 	  <article class="col-6 col-12-xsmall work-item">
 	    <a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-	    <h3>Risus ornare lacinia</h3>
-	    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+	    <h3>Modelo de lenguaje</h3>
+	    <p>Crear modelos de lenguaje en base a tus necesidades.</p>
 	  </article>
 	</div>
+	<!--
 	<ul class="actions">
 	  <li><a href="#" class="button">Full Portfolio</a></li>
 	</ul>
+	-->
       </section>
-      -->
+      
       
       <!-- Three -->
       <section id="three">
@@ -171,12 +184,10 @@
     <script src="assets/js/main.js"></script>
 
     <script type="text/javascript" src="bundle.js"></script>
-    
     <link rel="stylesheet" href="maze.css">
     <script src="https://use.fontawesome.com/2d03c56782.js"></script>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
     <script>
       var typed = new Typed('#element', {
 	  strings: ['a programmer', 'a maker','a software engineer'],
