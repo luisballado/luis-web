@@ -19,9 +19,11 @@
       
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script defer src="rueda_index.js"></script>
+    <link rel="stylesheet" href="rueda_styles.css" />
   </head>
   <body class="is-preload">
-    <marquee>
+    <marquee style="padding-top: 20px;">
       "Las máquinas pueden hacernos preguntas a las que aún no sabemos responder. - Turing"
     </marquee> 
     <!-- Header -->
@@ -58,14 +60,19 @@
 	</header>
 	<p>As a software developer and maker passionate about drone autonomy, I specialize in creating advanced UAV systems that integrate cutting-edge software and hardware solutions. With expertise in autonomous navigation, control algorithms, and aerial robotics, I am dedicated to driving innovation in unmanned systems. My goal is to develop efficient, intelligent technologies that push the boundaries of aerial automation.</p>
 	<!--
-	<ul class="actions">
+	    <ul class="actions">
 	  <li><a href="#" class="button">Learn More</a></li>
 	</ul>
-	-->
+	    -->
+	    <div id="wheelOfFortune">
+	      <canvas id="wheel" width="300" height="300"></canvas>
+	      <div id="spin">SPIN</div>
+	    </div>
       </section>
       
       <!-- Two -->
-      <section id="two">
+      <!--
+          <section id="two">
 	<h2>Recent Work</h2>
 	<div class="row">
 	  <article class="col-6 col-12-xsmall work-item">
@@ -103,6 +110,7 @@
 	  <li><a href="#" class="button">Full Portfolio</a></li>
 	</ul>
       </section>
+      -->
       
       <!-- Three -->
       <section id="three">
@@ -232,8 +240,8 @@
       }
       
       var random_boolean = Math.random() < 0.5;
-      
-      if(random_boolean){
+      if(false){
+	  if(random_boolean){
 	  
 	  const defaults = {
 	      spread: 360,
@@ -302,6 +310,7 @@
 	      );
 	  }, 250);
 	  
+      }
       }
       
             
