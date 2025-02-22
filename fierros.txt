@@ -1,0 +1,26 @@
+TIP32C
+555
+IR
+GAL16V08
+74138 decodificador 3 a 8
+7410 nand
+uln2803 driver motor
+ln298 driver motor
+7414 inversor schmitt
+lm311n
+lm358n
+5144
+7485
+7402
+7442
+7490
+7442
+7432
+74192
+74151
+74283
+7485
+74283
+74151
+7408
+ua741cp
